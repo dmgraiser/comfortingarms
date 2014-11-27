@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assisted Living and In Home Care in Cobb, Metro Atlanta, Cherokee, Fulton, Paulding | Caregivers and Senior Care in Dekalb County | Comforting Arms CALL NOW: 678-819-3775</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%=link_to image_tag("logo.png", :border => 0), root_path, :class => 'navbar-brand brand_logo'%>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="about_us.html.erb" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to 'About Us', about_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Testimonials', testimonials_path %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="services.html.erb" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to 'Services', services_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Welcome Home Package', welcome_home_package_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Why Home Care', why_home_care_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Respite Care', respite_care_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Request an Assessment', request_an_assessment_path %></li>
+            </ul>
+          </li>
+          <li><%= link_to 'Our Caregivers', our_caregivers_path %></li>
+          <li class="dropdown">
+            <a href="employment_opportunities.html.erb" class="dropdown-toggle" data-toggle="dropdown">Employment Opportunities <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to 'Employment Opportunities', employment_opportunities_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Apply Today', apply_today_path %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="resources.html.erb" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to 'Resources', resources_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Fall Prevention Program', fall_prevention_program_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Professional Affiliations', professional_affiliations_path %></li>
+            </ul>
+          </li>
+          <li><%= link_to 'Contact Us', contact_us_path %></li>
+        </ul>
+        
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Comforting Arms</h1>
+      <p>Embracing Your Loved Ones</p>
+    </div>
+    <div class="container">
+      Call us at 678-819-3775
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 side-bar">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            DOWNLOAD OUR BROCHURE
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li><%= link_to "Comforting Arms Brochure", "http://comfortingarms.com/wp-content/uploads/Comforting-Arms-Brochure-v2.pdf", target: "_blank" %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            Follow Us
+          </div>
+          <div class="panel-body">
+            <div class="container">
+              <span class="invisible">Blanks</span>
+              <%= link_to(image_tag("facebook.png"), "https://www.facebook.com/comfortingarms", target: "_blank") %>
+              <%= link_to(image_tag("twitter.png"), "https://twitter.com/ComfortingArmsG", target: "_blank") %>
+              <%= link_to(image_tag("linkedin.png"), "https://www.linkedin.com/company/comforting-arms", target: "_blank") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
