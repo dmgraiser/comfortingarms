@@ -104,21 +104,25 @@
             Upcoming Events
           </div>
           <div class="panel-body">
-            <ul class="event-box">
-              <% @events.each do |event| %>
-                <li> 
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <%= event.title %>
+            <% if @events.length != 0 %>
+              <ul class="event-box">
+                <% @events.each do |event| %>
+                  <li> 
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <%= event.title %>
+                      </div>
+                      <div class="panel-body">
+                        <p><%= event.info %></p>
+                        <p><strong><%= event.date.strftime("%A, %B %e, %Y ") %></strong></p>
+                      </div>
                     </div>
-                    <div class="panel-body">
-                      <p><%= event.info %></p>
-                      <p><strong><%= event.date.strftime("%A, %B %e, %Y ") %></strong></p>
-                    </div>
-                  </div>
-                </li>
-              <% end %>
-            </ul>
+                  </li>
+                <% end %>
+              </ul>
+            <% else %>
+              <p>There are no upcoming events at this time. Please check back later</p>  
+            <% end %>
           </div>
         </div>
         <div class="panel panel-primary">
