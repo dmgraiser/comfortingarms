@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :users
 
   get 'about' => 'welcome#about'
 
@@ -30,6 +29,10 @@ Rails.application.routes.draw do
   get 'why_home_care' => 'welcome#why_home_care'
 
   root 'welcome#home'
+
+  resources :events
+
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

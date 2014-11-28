@@ -86,7 +86,6 @@
     </div>
   </div>
 
-
   <div class="container">
     <div class="row">
       <div class="col-md-3 side-bar">
@@ -97,6 +96,28 @@
           <div class="panel-body">
             <ul>
               <li><%= link_to "Comforting Arms Brochure", "http://comfortingarms.com/wp-content/uploads/Comforting-Arms-Brochure-v2.pdf", target: "_blank" %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            Upcoming Events
+          </div>
+          <div class="panel-body">
+            <ul class="event-box">
+              <% @events.each do |event| %>
+                <li> 
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <%= event.title %>
+                    </div>
+                    <div class="panel-body">
+                      <p><%= event.info %></p>
+                      <p><strong><%= event.date.strftime("%A, %B %e, %Y ") %></strong></p>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>
