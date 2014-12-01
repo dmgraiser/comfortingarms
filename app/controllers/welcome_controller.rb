@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def home
-    @events = Event.all
+    @events = Event.all.order(:date)
   end
 
   def about

@@ -104,13 +104,13 @@
             Upcoming Events
           </div>
           <div class="panel-body">
-            <% if @events.length != 0 %>
+            <% if @events != nil %>
               <ul class="event-box">
                 <% @events.each do |event| %>
                   <li> 
                     <div class="panel panel-default">
                       <div class="panel-heading">
-                        <%= event.title %>
+                        <strong><%= event.title %></strong>
                       </div>
                       <div class="panel-body">
                         <p><%= event.info %></p>
