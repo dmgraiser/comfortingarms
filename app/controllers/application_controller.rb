@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  @events = Event.all.order(:date)
+  before_filter :event_list
+
+  def event_list
+  	@events = Event.all.order(:date)
+  end
 end
 
