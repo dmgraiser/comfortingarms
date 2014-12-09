@@ -19,8 +19,10 @@
 }
 
 .navbar-brand>img{
-	height: 50px;
+height: 40px;
+margin-top: 5px;
 }
+
 .navbar-brand{
 	padding: 0 5px;
 }
@@ -31,12 +33,17 @@ body{
 }
 
 .jumbotron{
-	background: url(<%= asset_path "jthands.jpg" %>) no-repeat;
+	background: url(<%= asset_path "jthandslite.png" %>) no-repeat;
 	background-size: cover;
+	margin-bottom: 0;
 }
 
-.jumbotron>.container>h1{
-	color: #44140a;
+.jtcontent>img, .jtcontent>h3{
+	width: 75%;
+	background: rgba(255, 255, 255, .5);
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
 }
 
 .side-bar{
@@ -91,10 +98,6 @@ a, a:hover, a:visited{
     position: fixed;
     top: 0;
     width: 100%;
-}
-
-.jumbotron{
-	margin-bottom: 0;
 }
 
 .navbar{
