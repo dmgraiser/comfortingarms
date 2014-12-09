@@ -28,7 +28,7 @@ margin-top: 5px;
 }
 
 body{
-	background: url(<%= asset_path "mountains.jpg" %>) no-repeat fixed;
+	background: url(<%= asset_path "mountains.jpg" %>) no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -90,7 +90,11 @@ padding: 1px 20px 20px 20px;}
 	width: 25%;
 }
 
-a, a:hover, a:visited{
+a, a:hover, a:visited {
+	text-decoration: underline;
+}
+
+.no-link-dec, .no-link-dec:hover, .no-link-dec:visited{
 	color: inherit;
 	text-decoration: none;
 	background: none;
