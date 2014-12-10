@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar" data-spy="affix" data-offset-top="310">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -45,48 +45,56 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="about_us.html.erb" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+          <li class="dropdown <% if @page == "about" %>
+                                <%= "active" %>
+                              <% end %>">
+            <a href="about_us.html.erb" class="dropdown-toggle no-link-dec" data-toggle="dropdown">About <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><%= link_to 'About Us', about_path %></li>
+              <li><%= link_to 'About Us', about_path, class: "no-link-dec" %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Testimonials', testimonials_path %></li>
+              <li><%= link_to 'Testimonials', testimonials_path, class: "no-link-dec" %></li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a href="services.html.erb" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+          <li class="dropdown <% if @page == "services" %>
+                                <%= "active" %>
+                              <% end %>">
+            <a href="services.html.erb" class="dropdown-toggle no-link-dec" data-toggle="dropdown">Services <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><%= link_to 'Services', services_path %></li>
+              <li><%= link_to 'Services', services_path, class: "no-link-dec" %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Welcome Home Package', welcome_home_package_path %></li>
+              <li><%= link_to 'Welcome Home Package', welcome_home_package_path, class: "no-link-dec" %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Why Home Care?', why_home_care_path %></li>
+              <li><%= link_to 'Why Home Care?', why_home_care_path, class: "no-link-dec" %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Respite Care', respite_care_path %></li>
+              <li><%= link_to 'Respite Care', respite_care_path, class: "no-link-dec" %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Request an Assessment', request_an_assessment_path %></li>
+              <li><%= link_to 'Request an Assessment', request_an_assessment_path, class: "no-link-dec" %></li>
             </ul>
           </li>
-          <li><%= link_to 'Our Caregivers', our_caregivers_path %></li>
-          <li class="dropdown">
-            <a href="employment_opportunities.html.erb" class="dropdown-toggle" data-toggle="dropdown">Employment Opportunities <span class="caret"></span></a>
+          <li class="<%= 'active' if @page == "caregivers" %>"><%= link_to 'Our Caregivers', our_caregivers_path, class: "no-link-dec" %></li>
+          <li class="dropdown <% if @page == "employment" %>
+                                <%= "active" %>
+                              <% end %>">
+            <a href="employment_opportunities.html.erb" class="dropdown-toggle no-link-dec" data-toggle="dropdown">Employment Opportunities <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><%= link_to 'Employment Opportunities', employment_opportunities_path %></li>
+              <li><%= link_to 'Employment Opportunities', employment_opportunities_path, class: "no-link-dec" %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Apply Today', apply_today_path %></li>
+              <li><%= link_to 'Apply Today', apply_today_path, class: "no-link-dec" %></li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a href="resources.html.erb" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+          <li class="dropdown <% if @page == "resources" %>
+                                <%= "active" %>
+                              <% end %>">
+            <a href="resources.html.erb" class="dropdown-toggle no-link-dec" data-toggle="dropdown">Resources <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><%= link_to 'Resources', resources_path %></li>
+              <li><%= link_to 'Resources', resources_path, class: "no-link-dec" %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Fall Prevention Program', fall_prevention_program_path %></li>
+              <li><%= link_to 'Fall Prevention Program', fall_prevention_program_path, class: "no-link-dec" %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Professional Affiliations', professional_affiliations_path %></li>
+              <li><%= link_to 'Professional Affiliations', professional_affiliations_path, class: "no-link-dec" %></li>
             </ul>
           </li>
-          <li><%= link_to 'Contact Us', contact_us_path %></li>
+          <li class="<%= 'active' if @page == "contact" %>"><%= link_to 'Contact Us', contact_us_path, class: "no-link-dec" %></li>
         </ul>
         
       </div><!-- /.navbar-collapse -->

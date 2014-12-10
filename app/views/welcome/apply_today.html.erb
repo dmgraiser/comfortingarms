@@ -1,4 +1,19 @@
-<div class="container">
-	<h1>Welcome#apply_today</h1>
-	<p>Find me in app/views/welcome/apply_today.html.erb</p>
-</div>
+<% @page = "employment" %>
+<h3>Apply Today</h3>
+<br />
+<p><strong>Work as a Caregiver or CNA with Comforting Arms!</strong></p>
+<%= image_tag "applyimg.jpg", class: "apply-img" %>
+<br />
+<p>We are currently looking for compassionate, caring and dependable caregivers who are interested in making a difference by providing in-home, non-medical care to the elderly. Many of our caregivers are active seniors themselves who develop long-term, satisfying relationships with our clients.</p>
+<br />
+<p><strong>How to apply:</strong></p>
+
+<p>Call our Employment phone line: <%= link_to "(678) 266-3388", "tel:678-266-3388", class: "no-link-dec" %></p>
+<br />
+<p><strong>OR:</strong></p>
+
+<p>Download the employment application worksheet to see what information you will need to have available for the online application. <%= link_to "Click Here", "http://comfortingarms.com/wp-content/uploads/CA-Employment-Application1.doc" %> for the worksheet.</p>
+<br />
+<p><strong>THEN:</strong></p>
+
+<p><%= link_to "Click Here", "http://tsc283.ersp.biz/employment", target: "_blank" %> to complete our online employment application</p>
