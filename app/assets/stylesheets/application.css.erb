@@ -180,3 +180,14 @@ a, a:hover, a:visited {
 .address{
 	text-align: center;
 }
+
+/* make bootstrap dropdowns work on hover */
+.navbar-nav .dropdown:hover > .dropdown-menu { 
+  display: block; 
+}
+.navbar-nav .dropdown:hover > a[data-toggle=dropdown] + .dropdown-menu { 
+  display: none;
+}
+.navbar-nav .dropdown.open > a[data-toggle=dropdown] + .dropdown-menu { 
+  display: block; 
+}
