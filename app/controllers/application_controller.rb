@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
 
   def event_list
   	@events = Event.all.order(:date)
+  	@event_show = []
+  	@events.each do |event|
+  		if event.date >= Date.today
+  			@event_show.push(event)
+  		end
+  	end
   end
 end
 

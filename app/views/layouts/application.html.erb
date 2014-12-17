@@ -131,9 +131,9 @@
             Upcoming Events
           </div>
           <div class="panel-body">
-            <% if @events.empty? != true %>
+            <% if @event_show.empty? != true %>
               <ul class="event-box">
-                <% @events.each do |event| %>
+                <% @event_show.each do |event| %>
                   <li> 
                     <div class="panel panel-default">
                       <div class="panel-heading">
